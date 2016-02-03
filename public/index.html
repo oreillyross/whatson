@@ -14,220 +14,80 @@
 
 <body>
 
-  <!-- Uses a transparent header that draws on top of the layout's background -->
+  <!-- Image card -->
 <style>
-.demo-layout-transparent {
-  background: url('images/arizona_fair_ground.jpg') center / cover;
+.demo-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('images/food_fair.jpg') center / cover;
 }
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-  color: white;
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
 }
 </style>
 
-<div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout-icon"></div>
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout__title">Whats On!</span>
-      <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#">Search</a>
-        <a class="mdl-navigation__link" href="#">Login</a>
-        <a class="mdl-navigation__link" href="#">Help</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout__title">Whats On!</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">Search</a>
-      <a class="mdl-navigation__link" href="#">Login</a>
-      <a class="mdl-navigation__link" href="#">Help</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div>
-
-
-      
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--1-col mdl-cell--0-col-tablet mdl-cell--0-col-phone">left margin</div>
-  <div class="mdl-cell mdl-cell--10-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-    
-    
-    <!-- Wide card with share menu button -->
-<style>
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('../images/arizona_fair_ground.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-</style>
-
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
+<div class="demo-card-image mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Image.jpg</span>
   </div>
 </div>
-    
-<!-- Wide card with share menu button -->
+
+<!-- Event card -->
 <style>
-.demo-card-wide.mdl-card {
-  width: 512px;
+.demo-card-event.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: #3E4EB8;
 }
-.demo-card-wide > .mdl-card__title2 {
-  color: #fff;
-  height: 176px;
-  background: url('../images/food_fair.jpg') center / cover;
+.demo-card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
 }
-.demo-card-wide > .mdl-card__menu {
+.demo-card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.demo-card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.demo-card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.demo-card-event > .mdl-card__title,
+.demo-card-event > .mdl-card__actions,
+.demo-card-event > .mdl-card__actions > .mdl-button {
   color: #fff;
 }
 </style>
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title2">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    Dit jaar mag ik jullie weer van harte welkom heten tijdens Food Truck Festival TREK-DEN HAAG. Van 10 t/m 13 september strijken wij neer in het Westbroekpark waar we er één groot sfeervol openlucht restaurant van gaan maken.
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
-  </div>
-</div>    
-    
-<!-- Wide card with share menu button -->
-<style>
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
-.demo-card-wide > .mdl-card__title1 {
-  color: #fff;
-  height: 176px;
-  background: url('../images/sinterklaas_intocht.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-</style>
-
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title1">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
+<div class="demo-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           card-event mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h4>
+      Fe    atured event:<br>
+      May 24, 2016<br>
+      7-11pm
+    </h4>
   </div>
   <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
+      Add to Calendar
     </a>
+    <div class="mdl-layout-spacer"></div>
+    <i class="material-icons">event</i>
   </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
-  </div>
-</div>        
-  
-  <!-- Wide card with share menu button -->
-<style>
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
-.demo-card-wide > .mdl-card__title3 {
-  color: #fff;
-  height: 176px;
-  background: url('../images/music.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-</style>
-
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title3">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    Music festival - come check it out
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
-  </div>
-</div>    
-    
-  </div>
-  
-  
-  <div class="mdl-cell mdl-cell--1-col mdl-cell--0-col-tablet mdl-cell--0-col-phone">right margin</div>
 </div>
-      
 
-    
-    
-    </div>
-  </main>
-</div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <div id="middle">
-    
-    
 
-    
-  </div>
- 
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
 
 </body>
 
