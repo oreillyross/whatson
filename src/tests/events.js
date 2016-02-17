@@ -1,6 +1,6 @@
 "use strict";
 
-let events = [
+var events = [
 
   {
     name: "Food Truck Festival",
@@ -30,7 +30,7 @@ let events = [
   }
 ]
 
+module.exports = events;
 
-const eventNames = events.map((event) => event.name);
 
-console.log(eventNames);
+
