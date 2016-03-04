@@ -18,6 +18,9 @@
   },
   "devDependencies": {
     "tap-spec": "^4.1.1",
-    "tape": "^4.4.0"
+    "tape": "^4.4.0",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "gulp-webserver": "^0.9.1"
   }
 }
