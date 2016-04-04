@@ -14,17 +14,31 @@
     
     var contacts = [
       
-      {key: 1, name: "Ross OReilly", email: "oreillyross@gmail.com"},
-      {key: 2, name: "Darth Vader", email: "darth@work.com"}
+      {key: 1, name: "Ross OReilly", email: "oreillyross@gmail.com", description: "Roo"},
+      {key: 2, name: "Darth Vader", email: "darth.here", description: "full stack dev"},
+      {key: 3, name: "Jim"}
     ]
     
-    var contactWithEmail = contacts
-    .filter(function(contact) { return contact.email;})
+    
+    var contactItem = React.createClass({
+       propTypes: {
+         name: React.PropTypes.string.isRequired,
+         email: React.PropTypes.string.isRequired,
+         description: React.PropTypes.string,
+       },
+       render: function() {
+         return (
+          React.createElement('li', {className: 'contact'}, 
+            React.createElement('h2', this.props.name),
+            React.createElement('a', {href: 'mailto:' + this.props.email}, this.props.email),
+            React.createElement('h3', {}, this.props.description)) 
+         )
+       }
+    });
+    
+    var contactWithEmail = contacts.filter(function(contact) { return contact.email;})
     .map(function(contact) {
-        return React.createElement('li', {key: contact.key},
-          React.createElement('h2', {}, contact.name),
-          React.createElement('a', {href: 'mailto' + contact.email}, contact.email)
-    )
+        return React.createElement(contactItem, contact)
     })
     
     var rootElement = 
