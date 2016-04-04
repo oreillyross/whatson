@@ -12,21 +12,27 @@
 
     <script>
     
+    var contacts = [
+      
+      {key: 1, name: "Ross OReilly", email: "oreillyross@gmail.com"},
+      {key: 2, name: "Darth Vader", email: "darth@work.com"}
+    ]
+    
+    var contactWithEmail = contacts
+    .filter(function(contact) { return contact.email;})
+    .map(function(contact) {
+        return React.createElement('li', {key: contact.key},
+          React.createElement('h2', {}, contact.name),
+          React.createElement('a', {href: 'mailto' + contact.email}, contact.email)
+    )
+    })
+    
     var rootElement = 
       React.createElement('div', {}, 
         React.createElement('h1', {}, 'Contacts'),
-        React.createElement('ul', {},
-          React.createElement('li', {},
-            React.createElement('h2', {}, "Ross OReilly"),
-            React.createElement('a', {href: 'mailto:oreillyross@gmail.com'}, 'oreillyross@gmail.com')
-          ),
-          React.createElement('li', {},
-            React.createElement('h2', {}, 'Darth Vader'),
-            React.createElement('a', {href: 'mailto:darth@home.com'}, 'darth@home.com')
-          )
+        React.createElement('ul', {}, contactWithEmail)
         )
-    )
-    
+   
     ReactDOM.render(rootElement, document.getElementById('react-app'))
 
 </script>
