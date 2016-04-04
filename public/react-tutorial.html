@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>I'm in a React app!</title>
-    <link rel="stylesheet" href="" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
     <div id="react-app"></div>
@@ -30,7 +30,7 @@
       
       render: function() {
         return (
-          React.createElement('form', {},
+          React.createElement('form', {className: 'ContactForm'},
             React.createElement('input', {
                 type: 'text',
                 placeholder: 'Name (required)',
