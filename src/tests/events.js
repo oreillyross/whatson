@@ -1,4 +1,4 @@
-"use strict";
+
 
 var events = [
 
@@ -30,7 +30,7 @@ var events = [
   }
 ]
 
-module.exports = events;
+module.exports = 'events';
 
 
 
